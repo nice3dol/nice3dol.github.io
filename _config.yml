@@ -1,57 +1,99 @@
-title: Leon's
-author: LEon
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: "LEon"
 email: nice3dol@gmail.com
-description: > # this means to ignore newlines until "show_exerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-show_excerpts: true # set to true to show excerpts on the homepage
+description: >- # this means to ignore newlines until "baseurl:"
+  Data scientist. Developer. Novelist (be...)
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://dingrr.com/" # the base hostname & protocol for your site, e.g. 
+repository: nice3dol/nice3dol.github.io
+github: nice3dol
 
-# Minima date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-sass:
-  sass_dir: _sass
-plainwhite:
-  name: Leon
-  tagline: Data Scientist
-  date_format: "%b %-d, %Y"
-  sitemap: true # set to true to generate sitemap.xml content
-  search: true # set to true to enable searchbar
-  dark_mode: true # set to true to add dark mode toggle
-  portfolio_image: "assets/leon_profile.png" # the path from the base directory of the site to the image to display (no / at the start)
-  html_lang: "en" # set the lang attribute of the <html> tag for the pages. See here for a list of codes: https://www.w3schools.com/tags/ref_country_codes.asp
-  condensed_mobile:
-    #- home
-    - page
-    - post
-  # generate social links in footer
-  social_links:
-    github:  samarsault
-    linkedIn: in/samarsault
-    #dribbble: jekyll
-    #flickr:   jekyll
-    #instagram: jekyll
-    #pinterest: jekyll
-    #youtube: jekyll
-    #facebook: jekyll
-    #soundcloud: jekyll
-    #telegram: jekyll
-    #gitlab: jekyll
-    #email: jekyll
+header_image: assets/leon_profile.png
 
-    # Mastodon instances
-    # mastodon:
-    # - username: nice3dol
-    #   instance: nice3dol.github.io
+google_analytics:
+comments: true
+disqus: purelog-jekyll
 
-# If you want to link only specific pages in your header, uncomment
-# this and add the path to the pages in order as they should show up
-#header_pages:
-# - about.md
+author: Brennan K. Brown
+author_bio: >-
+  Hey there! 😄 My name is Brennan, I'm a 25-year-old Métis web developer and 
+  content strategist from Winnipeg, Manitoba and currently reside in Calgary, 
+  Alberta. I've recently compeleted a Full Stack Developer Program at EvolveU, 
+  and I'm looking to help those that need web development work done, or 
+  searching for ideas and management for their next content project.
+author_pic: https://brennanbrown.ca/img/avatar.png
+paginate: 4
+paginate_path: "/:num/"
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 # Build settings
-theme: plainwhite
-
+theme: null
 plugins:
+  - jekyll-feed
   - jekyll-seo-tag
-#  - jekyll-feed
+  - jekyll-paginate
+permalink: /:title
+
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post"
+      author: Brennan K. Brown
+      avatar: assets/profile-sm.png
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: post
+      content-type: notes
+  - scope:
+      path: ""
+      type: journals
+    values:
+      layout: journal-entry
+      content-type: journals
+
+# Allows all pages to be put into `_pages` folder
+# for easier navigation and better SEO.
+collections:
+  pages:
+    output: true
+    permalink: /:title
+  notes:
+    output: true
+    permalink: /notes/:title
+  journals:
+    output: true
+    permalink: /journals/:title
+
+# Exclude from processing.
+exclude:
+  - ".jekyll-cache"
+  - "Gemfile"
+  - "Gemfile.lock"

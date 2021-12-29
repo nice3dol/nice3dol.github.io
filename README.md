@@ -1,222 +1,186 @@
-# plainwhite
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/brennanbrown/purelog">
+    <img src="/assets/profile.png" alt="Logo" width="120" height="120">
+  </a>
 
-Simplistic jekyll portfolio-style theme for writers.
+  <h3 align="center">Purelog Theme for Jekyll</h3>
 
-**Demo**: [samarsault.com](https://samarsault.com)
+  <p align="center">
+    A responsive, well-designed template to help you get started on your next blog or website.
+    <br />
+    <a href="https://github.com/brennanbrown/purelog"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <strong><a href="https://purelog.netlify.app">View Demo</a></strong>
+    ·
+    <a href="https://github.com/brennanbrown/purelog/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/brennanbrown/purelog/issues">Request Feature</a>
+  </p>
+</p>
 
-![plainwhite theme preview](/screenshot.png)
+<!-- BADGES -->
+<p align="center">
+<a href="https://app.netlify.com/sites/purelog/deploys"><img src="https://api.netlify.com/api/v1/badges/062e333f-9e9d-440d-9b40-16d11959793d/deploy-status" alt="Netlify Status"></a>
+<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/brennanbrown/purelog">
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/brennanbrown/purelog">
+<a href="https://github.com/brennanbrown/purelog/search?l=html"><img alt="GitHub top language" src="https://img.shields.io/github/languages/top/brennanbrown/purelog"></a>
+<a href="https://github.com/brennanbrown/purelog/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/brennanbrown/purelog"></a>
+<a href="https://github.com/brennanbrown/purelog/commits/main"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/brennanbrown/purelog"></a>
+<a href="https://github.com/brennanbrown/purelog/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/brennanbrown/purelog"></a>
+<a href="https://purelog.netlify.app"><img alt="Website" src="https://img.shields.io/website?down_color=red&down_message=Offline%21&label=Status&up_color=darkgreen&up_message=Online%21&url=https%3A%2F%2Fpurelog.netlify.app"></a>
+<br />
+<a href="https://github.com/brennanbrown?tab=followers"><img alt="GitHub followers" src="https://img.shields.io/github/followers/brennanbrown?label=Follow%20Me%21&style=social"></a>
+<a href="https://github.com/brennanbrown/purelog/watchers"><img alt="GitHub watchers" src="https://img.shields.io/github/watchers/brennanbrown/purelog?label=Watch%21&style=social"></a>
+<a href="https://github.com/brennanbrown/purelog/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/brennanbrown/purelog?label=Star%21&style=social"> </a>
+<a href="https://github.com/brennanbrown/purelog/network/members"><img alt="GitHub forks"src="https://img.shields.io/github/forks/brennanbrown/purelog?label=Fork%21&style=social"></a>
+</p>
 
-## Installation on Github Pages
+<!-- ABOUT THE PROJECT -->
 
-Add this line to your site's `_config.yml`:
+## About The Project
 
-```yaml
-remote_theme: samarsault/plainwhite-jekyll
-```
+**Purelog** is a responsive, sidebar theme for the popular JAMstack generator Jekyll that only uses the minimal [**Pure.css** framework](https://github.com/pure-css/pure) (hence the name!), while still following the best practices possible for accessibility and search-engine optimization.
+
+I created this after finishing [Watery](https://github.com/brennanbrown/watery) (which this theme is built off of), as a way to add more functionality and design while still remaining as lightweight as possible.
+
+This project is aimed towards those looking for an interesting theme for Jekyll that has features that aren't found commonly elsewhere, specifically having separate sections dedicated towards: blogging, note-taking, and daily journal entries.
+
+![Purelog Screen Shot](https://i.postimg.cc/NfxJvZgx/purelog2.png)
+
+### Features
+
+Here are a few interesting features of this Jekyll theme:
+
+- A fully customizable and empty `_BLANK_config.yml` to make getting up-and-running easy.
+- A speedy, on-site search function using [Simply Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search).
+- Custom collections for different types of material (note-taking, journal writing, etc.)
+- An auto-generating archive page that displays all entries from _all_ collections.
+- Auto-generating tags and categories pages.
+- Having a `_pages` collection for easier organization.
+- An author bio at the end of each post. (Located in `_inclues/author.html`)
+- Full Rouge support for syntax highlighting. (Currently using `base16.solarized.light`)
+- Auto-generated RSS feed, sitemap, accessibility features, and search-engine optimization.
 
 ## Installation
 
-Add this line to your Jekyll site's `Gemfile`:
+### Prerequisites
 
-```ruby
-gem "plainwhite"
+Jekyll requires the following:
+
+- Ruby version **2.5.0** or higher
+- RubyGems
+- GCC and Make
+
+See [Requirements](https://jekyllrb.com/docs/installation/#requirements) for guides and details.
+
+### Instructions
+
+1. Install all [prerequisites](https://jekyllrb.com/docs/installation/).
+2. Install the jekyll and bundler [gems](https://jekyllrb.com/docs/ruby-101/#gems).
+
+```
+gem install jekyll bundler
 ```
 
-And add this line to your Jekyll site's `_config.yml`:
+3. Clone this repository.
 
-```yaml
-theme: plainwhite
+```
+git clone https://github.com/brennanbrown/purelog.git
 ```
 
-And then execute:
+4. Change into your new directory.
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install plainwhite
-
-## Usage
-
-The "plainwhite" key in \_config.yml is used to customize the theme data.
-
-```yaml
-plainwhite:
-  name: Adam Denisov
-  tagline: Developer. Designer
-  date_format: "%b %-d, %Y"
-
-  social_links:
-    twitter: samarsault
-    github: samarsault
-    linkedIn: in/samarsault # format: locale/username
+```
+cd purelog
 ```
 
-**Updating Placeholder Image**
+5. Install gems from the `Gemfile`.
 
-The placeholder portfolio image can be replaced by the desired image by placing it as `assets/portfolio.png` in your jekyll website, or by changing the following line in `_config.yaml`
-
-```yaml
-plainwhite:
-  portfolio_image:  "assets/portfolio.png" # the path from the base directory of the site to the image to display (no / at the start)
+```
+bundle install
 ```
 
-To use a different image for dark mode, e.g. with different colors that work better in dark mode, add a `portfolio_image_dark` entry in addition to the `portfolio_image`.
+6. Build the site and make it available on a local server.
 
-```yaml
-plainwhite:
-  portfolio_image:      "assets/portfolio.png"
-  portfolio_image_dark: "assets/portfolio_dark.png"
+```
+bundle exec jekyll serve
 ```
 
-**Comments (Disqus)**
+7. Browse to [http://localhost:4000](http://localhost:4000)
 
-Comments on posts can be enabled by specifying your disqus_shortname under plainwhite in `_config.yml`. For example,
+If you encounter any errors during this process, check that you have installed all the prerequisites in [Requirements](https://jekyllrb.com/docs/installation/#requirements).
 
-```yaml
-plainwhite:
-  disqus_shortname: games
-```
+If you still have issues, see [Troubleshooting](https://jekyllrb.com/docs/troubleshooting/#configuration-problems).
 
-**Google Analytics**
+## Getting Started
 
-It can be enabled by specifying your analytics id under plainwhite in `_config.yml`
+Once you have Jekyll up-and-running, there are only a few steps needed to make this theme your own:
 
-```yaml
-plainwhite:
-  analytics_id: "< YOUR ID >"
-```
+1. Fill out the `_BLANK_config.yml` configuration file and replace the current `_config.yml`
+2. Remove the `example_posts` folder in `_posts`, `_notes`, `_journals` and start writing your own!
+3. Modify or remove the pages in `_pages` to however you see fit.
+4. _(Optional)_ Modify or remove this `README.md` with information about your own project or blog.
+5. _(Optional)_ Modify the CSS files in the `assets` folder to customize the site.
 
-**Sitemap**
+<!-- ROADMAP -->
 
-It can be toggled by the following line to under plainwhite in `_config.yml`
+## Roadmap
 
-```yaml
-plainwhite:
-  sitemap: true
-```
+There are several features that I'm still planning to create and integrate, including:
 
-**Excerpts**
+- Create a [Theme Gem](https://jekyllrb.com/docs/themes/#publishing-your-theme)
+- Add easy and automatic buttons to ["Deploy to Netlify"](https://docs.netlify.com/site-deploys/create-deploys/#deploy-to-netlify-button), Heroku, etc.
+- Add Travis continious integration checks
+- Add additional documentation for creating custom collections and auto generated pages
+- Add more example posts and articles
 
-Excerpts can be enabled by adding the following line to your `_config.yml`
+See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
 
-```yaml
-show_excerpts: true
-```
-
-**Layouts**
-
-- Home
-- Page
-- Post
-
-**Navigation**
-
-Navigation can be enabled by adding the following line to your `_config.yml`
-
-```yaml
-plainwhite:
-  navigation:
-    - title: My Work
-      url: "/my-work"
-    - title: Resume
-      url: "/resume"
-```
-
-**Mobile**
-
-By default, Plainwhite places the sidebar (logo, name, tagline etc.) above the content on mobile (narrow screens).
-To condense it (moving some things to the bottom of the page and making the rest smaller) so it takes up less space, add the following to your `_config.yml`:
-
-```yaml
-plainwhite:
-  condensed_mobile:
-    - home
-    - post
-    - page
-```
-
-This chooses which layouts (types of page) should be condensed on mobile screens. E.g. if you want everything but the landing page to be condensed, remove `home` from the list. This option does not affect rendering on wider screens.
-
-**Dark mode**
-
-Dark mode can be enabled by setting the `dark_mode` flag in your `_config.yml`
-
-The website will check the OS preferred color scheme and set the theme accordingly, the preference will then be saved in a cookie
-
-```yaml
-plainwhite:
-  dark_mode: true
-```
-
-![plainwhite dark theme previe](/dark.png)
-
-**Multiline tagline**
-
-Tagline can be multiline in this way
-
-```yaml
-plainwhite:
-  tagline: |
-  First Line. 
-
-  Second Line. 
-
-  Third Line.
-```
-
-**Search-bar**
-
-Search-bar can be enabled by adding the following line to `config.yml`
-
-```yaml
-plainwhite:
-  search: true
-```
-
-Search is powered by [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search) Jekyll plugin. A `search.json` containing post meta and contents will be generated in site root folder. Plugin JavaScript will then match for posts based on user input. More info and `search.json` customization documentation can be found in plugin repository.
-
-**Base URL**
-
-You can specify a custom base URL (eg. example.com/blog/) by adding the following line to `_config.yaml`. Note that there is no trailing slash on the URL.
-
-```yaml
-baseurl: "/blog"
-```
-
-**Language**
-
-You can set the `lang` attribute of the `<html>` tag on your pages by changing the following line in `_config.yml`:
-
-```yaml
-plainwhite:
-  html_lang: "en"
-```
-
-[See here for a full list of available language codes](https://www.w3schools.com/tags/ref_country_codes.asp)
+<!-- CONTRIBUTING -->
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/samarsault/plainwhite-jekyll. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-## Development
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `plainwhite.gemspec` accordingly.
-
-## Donation
-If this project help you reduce time to develop, you can give me a cup of coffee :) 
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/thelehhman)
+<!-- LICENSE -->
 
 ## License
 
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+Distributed under the MIT License. You can use this project however you see fit without needing to give attribution.
 
-## More themes
+See `LICENSE` for more information.
 
-- [Texture](https://github.com/samarsault/texture)
+## Resources
+
+While creating this theme, I came across a lot of helpful and hard-to-find resources. If you'd like to dive deeper into Jekyll, check them out:
+
+- Jumping Into Jekyll: <https://dev.to/brennan/jumping-into-jekyll-4o9h>
+- Jekyll Cheatsheet: <https://devhints.io/jekyll>
+- Course on Jekyll: <https://learn-the-web.algonquindesign.ca/topics/jekyll/>
+- Jekyll for Designers: <http://simpleprimate.com/jekyll-for-designers/index.html>
+- Dynamic Copyright on Jekyll: <https://michaelsoolee.com/jekyll-copyright/>
+- Creating breadcrumbs in Jekyll: <https://jekyllcodex.org/without-plugin/breadcrumbs/>
+- Display all items from ALL collections: <https://stackoverflow.com/questions/31171041/listing-all-collections-in-jekyll>
+
+### Other Resources
+
+- For markdown previews: <https://jaspervdj.be/lorem-markdownum/>
+- Case Study on webfont performance: <https://www.keycdn.com/blog/web-font-performance>
+- An extensive `.gitignore`: <https://miguelmota.com/bytes/extensive-gitignore/>
+
+## Credit
+
+[**Pure.css**](https://purecss.io/) was created by the [Pure CSS](https://github.com/pure-css) group.
+
+[**Simple Jekyll Search**](https://github.com/christian-fei/Simple-Jekyll-Search) was created by [Christian Fei](https://github.com/christian-fei).
+
+Various notes and ideas were taken from [**Simply Jekyll**](https://github.com/raghuveerdotnet/simply-jekyll) by [Raghuveer S.](https://github.com/raghuveerdotnet).
