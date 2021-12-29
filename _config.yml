@@ -1,6 +1,6 @@
-title: Your awesome title
-author: GitHub User
-email: your-email@domain.com
+title: Leon's
+author: LEon
+email: nice3dol@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -42,9 +42,7 @@ plainwhite:
     # Mastodon instances
     # mastodon:
     # - username: nice3dol
-    #   instance: example.com
-    # - username: jekyll2
-    #   instance: example.com
+    #   instance: nice3dol.github.io
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
